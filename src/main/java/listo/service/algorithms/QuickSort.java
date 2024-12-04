@@ -10,9 +10,9 @@ public class QuickSort {
 
     private static void quickSort(List<Integer> dataset, int low, int high) {
         if (low < high) {
-            int pi = partition(dataset, low, high);
-            quickSort(dataset, low, pi - 1);
-            quickSort(dataset, pi + 1, high);
+            int pivot = partition(dataset, low, high);
+            quickSort(dataset, low, pivot - 1);
+            quickSort(dataset, pivot + 1, high);
         }
     }
 

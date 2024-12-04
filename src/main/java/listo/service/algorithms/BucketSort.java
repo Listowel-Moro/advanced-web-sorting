@@ -27,8 +27,8 @@ public class BucketSort {
         // Sort each bucket and collect the sorted elements
         dataset.clear();
         for (List<Integer> bucket : buckets) {
-            Collections.sort(bucket); // You can use any sorting algorithm here
-            dataset.addAll(bucket);
+            List<Integer> sortedBucket = QuickSort.sort(bucket);
+            dataset.addAll(sortedBucket);
         }
         return dataset;
     }
